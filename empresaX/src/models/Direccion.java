@@ -7,14 +7,6 @@ public class Direccion {
     private String ciudad;
     private String codigoPostal;
 
-    public Direccion() {
-        this.calle = "Sin definir";
-        this.numeroCasa = "00000";
-        this.barrio = "Sin definir";
-        this.ciudad = "Sin ubicada";
-        this.codigoPostal = "******";
-    }
-
     public Direccion(String calle, String numeroCasa, String barrio, String ciudad, String codigoPostal) {
         this.calle = calle;
         this.numeroCasa = numeroCasa;
@@ -33,4 +25,5 @@ public class Direccion {
                 ", codigoPostal='" + codigoPostal + '\'' +
                 '}';
     }
+
 }
