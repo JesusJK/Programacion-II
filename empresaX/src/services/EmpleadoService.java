@@ -100,9 +100,9 @@ public class EmpleadoService {
         System.out.println("Ingrese el codigo del empleado a buscar");
         String codigo = sc.next();
         Empleado empleadoEncontrado = null;
-        for (Empleado empleado : listaEmpleados) {
-            if (codigo.equals(empleado.getCodigo())) {
-                empleadoEncontrado = empleado;
+        for (int i = 0; i < listaEmpleados.size(); i++) {
+            if (codigo.equals(listaEmpleados.get(i).getCodigo())) {
+                empleadoEncontrado = listaEmpleados.get(i);
                 System.out.println("Empleado encontrado.");
                 System.out.println("Nombre:"+empleadoEncontrado.getNombreEmpleado());
                 System.out.println("Horas Trabajadas:"+empleadoEncontrado.getHorasTrabajadas());

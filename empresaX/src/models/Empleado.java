@@ -23,9 +23,7 @@ public class Empleado {
         this.salario = salario;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+    
     public String getCodigo() {
         return codigo;
     }
@@ -50,7 +48,6 @@ public class Empleado {
     public double getValorHoraTrabajadas() {
         return valorHoraTrabajadas;
     }
-
 
     public void setSalario(double salario) {
         this.salario = salario;
