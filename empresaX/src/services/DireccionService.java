@@ -13,6 +13,7 @@ public class DireccionService {
     }
 
     public Direccion crearDireccion(){
+        System.out.println("CREAR LA DIRECCIÓN");
         System.out.println("Describa el nombre de la calle");
         String calle = sc.next();
         System.out.println("Escriba el numero de la casa");

@@ -25,5 +25,4 @@ public class Direccion {
                 ", codigoPostal='" + codigoPostal + '\'' +
                 '}';
     }
-
 }

@@ -1,5 +1,6 @@
 package services;
 
+import models.Direccion;
 import models.Empleado;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -9,6 +10,7 @@ public class EmpleadoService {
     private Empleado empleado;
     private HashMap<String,Empleado> listaEmpleado;
     private DireccionService direccionService;
+    private Direccion direccion;
 
     public EmpleadoService() {
         this.sc = new Scanner(System.in);
@@ -53,7 +55,9 @@ public class EmpleadoService {
         System.out.println("Ingrese el valor de la hora");
         double valor = sc.nextDouble();
 
-        empleado = new Empleado(codigo, nombre, horas, valor, calcularSueldo(horas, valor));
+        direccionService = new DireccionService();
+        direccion = direccionService.crearDireccion();
+        empleado = new Empleado(codigo, nombre, horas, valor, calcularSueldo(horas, valor),direccion);
         listaEmpleado.put(codigo,empleado);
     }
 
@@ -72,6 +76,9 @@ public class EmpleadoService {
             empleado.setValorHoraTrabajada(valor);
 
             empleado.setSalario(calcularSueldo(horas, valor));
+
+            direccion=direccionService.crearDireccion();
+            empleado.setDireccion(direccion);
             listaEmpleado.put(empleado.getCodigo(),empleado);
 
 
@@ -88,6 +95,7 @@ public class EmpleadoService {
             System.out.println("Horas: " + empleadoEncontrado.getHorasTrabajadas());
             System.out.println("Valor: " + empleadoEncontrado.getValorHoraTrabajada());
             System.out.println("Salario: " + empleadoEncontrado.getSalario());
+            System.out.println("Direccion: " + empleadoEncontrado.getDireccion());
         }else {
             System.out.println("El empleado no existe");
             buscarEmpleado();

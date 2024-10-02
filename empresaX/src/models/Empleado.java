@@ -6,6 +6,7 @@ public class Empleado {
     private int horasTrabajadas;
     private double valorHoraTrabajada;
     private double salario;
+    private Direccion direccion;
 
     public Empleado() {
         this.codigo = "00000";
@@ -13,28 +14,25 @@ public class Empleado {
         this.horasTrabajadas = 0;
         this.valorHoraTrabajada = 0;
         this.salario = 0;
+        this.direccion = null;
     }
 
-    public Empleado(String codigo, String nombreEmpleado, int horasTrabajadas, double valorHoraTrabajada, double salario) {
+    public Empleado(String codigo, String nombreEmpleado, int horasTrabajadas, double valorHoraTrabajada, double salario, Direccion direccion) {
         this.codigo = codigo;
         this.nombreEmpleado = nombreEmpleado;
         this.horasTrabajadas = horasTrabajadas;
         this.valorHoraTrabajada = valorHoraTrabajada;
         this.salario = salario;
+        this.direccion = direccion;
     }
 
     public String getCodigo() {
         return codigo;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
     public String getNombreEmpleado() {
         return nombreEmpleado;
     }
-
     public void setNombreEmpleado(String nombreEmpleado) {
         this.nombreEmpleado = nombreEmpleado;
     }
@@ -42,7 +40,6 @@ public class Empleado {
     public int getHorasTrabajadas() {
         return horasTrabajadas;
     }
-
     public void setHorasTrabajadas(int horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
     }
@@ -50,13 +47,22 @@ public class Empleado {
     public double getValorHoraTrabajada() {
         return valorHoraTrabajada;
     }
-
     public void setValorHoraTrabajada(double valorHoraTrabajada) {
         this.valorHoraTrabajada = valorHoraTrabajada;
     }
 
     public double getSalario() {
         return salario;
+    }
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 
     @Override
@@ -67,6 +73,7 @@ public class Empleado {
                 ", horasTrabajadas=" + horasTrabajadas +
                 ", valorHoraTrabajada=" + valorHoraTrabajada +
                 ", salario=" + salario +
+                ", direccion=" + direccion +
                 '}';
     }
 }
