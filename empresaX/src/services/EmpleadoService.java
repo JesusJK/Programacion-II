@@ -11,6 +11,7 @@ public class EmpleadoService {
     private HashMap<String,Empleado> listaEmpleado;
     private DireccionService direccionService;
     private Direccion direccion;
+    String codigo;
 
     public EmpleadoService() {
         this.sc = new Scanner(System.in);
@@ -41,10 +42,13 @@ public class EmpleadoService {
         } while (seleccion != 0);
     }
 
+
     private void crearEmpleado() {
         System.out.println("****CREAR EMPLEADOS****");
+        do {
         System.out.println("Ingrese el codigo");
-        String codigo = sc.next();
+        codigo = sc.next();
+        }while (codigo.equals(listaEmpleado.keySet()));
 
         System.out.println("Ingrese el nombre del empleado");
         String nombre = sc.next();
