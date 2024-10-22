@@ -1,2 +1,6 @@
-Hola mundo escribir
-otro texto
+{
+  "nombre": "Pepito Perez",
+  "telefono": "312594851",
+  "correo": "pepito@gmail.com",
+  "fecha-creacion": "21/10/2024"
+}
