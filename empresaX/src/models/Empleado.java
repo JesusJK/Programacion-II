@@ -29,23 +29,20 @@ public class Empleado {
     public String getCodigo() {
         return codigo;
     }
-
     public String getNombreEmpleado() {
         return nombreEmpleado;
     }
-    public void setNombreEmpleado(String nombreEmpleado) {
-        this.nombreEmpleado = nombreEmpleado;
-    }
-
     public int getHorasTrabajadas() {
         return horasTrabajadas;
+    }
+    public double getValorHoraTrabajada() {
+        return valorHoraTrabajada;
     }
     public void setHorasTrabajadas(int horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
     }
-
-    public double getValorHoraTrabajada() {
-        return valorHoraTrabajada;
+    public void setNombreEmpleado(String nombreEmpleado) {
+        this.nombreEmpleado = nombreEmpleado;
     }
     public void setValorHoraTrabajada(double valorHoraTrabajada) {
         this.valorHoraTrabajada = valorHoraTrabajada;
